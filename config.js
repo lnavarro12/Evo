@@ -1,9 +1,9 @@
 // Fichero de configuración de la bd y puertos
 module.exports ={
 	port: process.env.PORT || 3001,
-	db: process.env.MONGODB || 'mongodb://usuarioevo:123@localhost/evohr',
+	db: process.env.MONGODB || 'mongodb://admin:admin@ds157641.mlab.com:57641/heroku_xtldxzhc',
 	SECRET_TOKEN: 'miclavedetokens'
 }
- //nube - mongodb://admin:admin@ds133321.mlab.com:33321/heroku_b6k75vtm
+ //nube - mongodb://admin:admin@ds157641.mlab.com:57641/heroku_xtldxzhc
  //local - mongodb://usuarioevo:123@localhost/evohr
  
