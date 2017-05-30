@@ -520,17 +520,18 @@ usuario.controller('controllerListUsuarios', ['$scope', '$http', '$location', fu
 			})
 
 			.then(function(data,status,headers,config){
+        console.log(data);
 				swal({
 					title: "Usuario Eliminado!",
 					text: "La información del usuario ha sido eliminada.",
 					type: "success",
 					showCancelButton: false,
 					confirmButtonColor: "#DD6B55",
-					closeOnConfirm: false,
-					},
-					function(isConfirm){
-					  $location.path('/empleados');
+					closeOnConfirm: true
 				});
+        if (data.data.error=="") {
+          $location.path('/empleados');
+        }
 			})
 
 			.catch(function(data,status,headers,config){
