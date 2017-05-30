@@ -104,11 +104,12 @@ routerUsuario.route("/usuarios")
 		estado: "inactivo"
 	};
 
-	mUsuario.update(update)
+	mUsuario.update({_id: req.query.id}, update)
 
 	.then((done)=>{
 		res.status(200).send({
-			message: "El Usuario se ha eliminado correctamente"
+			message: "El Usuario se ha eliminado correctamente",
+			error: "",
 		})
 	})
 
